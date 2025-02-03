@@ -475,3 +475,8 @@ nav a {
 .vid a:hover::after {
   width: 100%;
 }
+@media only screen and (max-width: 600px) {
+  .centerImage{
+    width:100%;
+    height:fit-content;
+}
