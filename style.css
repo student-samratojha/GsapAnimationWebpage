@@ -1,0 +1,477 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: mori;
+}
+@font-face {
+  font-family: mori;
+  src: url(PPMori-Regular-945fa950.ttf);
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+.main {
+  background: #0f0d0d;
+}
+.page1 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  z-index: 1;
+  overflow: hidden;
+  position: fixed;
+  top: 6px;
+  left: 0;
+  justify-content: space-between;
+  padding: 2vw 6vw;
+}
+.nleft {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 1.4vw;
+  font-weight: 550;
+  position: relative;
+  z-index: 3;
+  mix-blend-mode: difference;
+  color: #ffeff2;
+  text-transform: capitalize;
+}
+#cursor {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: background 0.5s ease;
+  position: fixed;
+  top: 0;
+  display: flex;
+  font-weight: 900;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  mix-blend-mode: difference;
+  left: 0;
+}
+.centerImage {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  height: 50%;
+  /* border: 1px solid red; */
+  opacity: 0;
+  mix-blend-mode: difference;
+}
+.centerImage .txt {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  /* padding-top: 3vw; */
+  overflow: hidden;
+  justify-content: space-evenly;
+  flex-direction: column;
+  gap: 1vw;
+}
+#btn {
+  padding: 6px 11px;
+  font-size: 1.4vw;
+  width: fit-content;
+  color: #ffeff2;
+  background: #01352a;
+  border: none;
+  border-top-left-radius: 11px;
+  border-top-right-radius: 11px;
+  position: relative;
+}
+.centerImage #btn::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: blue;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  transition: all 0.3s ease;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.centerImage #btn:hover::after {
+  transform: scaleX(1);
+}
+.centerImage h1 {
+  font-size: 2vw;
+  position: relative;
+  z-index: 8;
+  font-weight: 200;
+  color: #ffeff2;
+  text-transform: capitalize;
+}
+.centerImage p {
+  font-size: 1vw;
+  position: relative;
+  z-index: 8;
+  color: #ffeff2;
+  /* width: 70%; */
+  line-height: 1.5;
+  letter-spacing: 1.1;
+  font-weight: 400;
+}
+.centerImage img {
+  width: 60%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 22px;
+  object-position: center;
+}
+#hed {
+  font-size: 7vw;
+  position: absolute;
+  mix-blend-mode: difference;
+  top: 0;
+  z-index: 3;
+  right: -100%;
+  color: #ffeff2;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-top: 8vw;
+}
+.fronter {
+  width: 80%;
+  position: absolute;
+  top: 15%;
+  /* border: 2px solid red; */
+  border-radius: 11px;
+  left: 10%;
+  border: 2px solid red;
+  box-shadow: 0 0 24px red;
+  height: 80%;
+  overflow: hidden;
+  background: #381e1e;
+}
+.fronter video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* ----------------------page2------------------ */
+.page2 {
+  width: 100%;
+  padding: 5vw 5vw 2vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  /* background: red; */
+}
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  justify-content: flex-end;
+}
+.writtenSpan {
+  width: 100%;
+  height: fit-content;
+  /* background: #ff0000; */
+  color: #ffeff2;
+  overflow: hidden;
+  padding: 0% 5px;
+  display: flex;
+  border-radius: 22px;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+}
+.bodr {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  transition: all 0.3s ease;
+  width: 0%;
+}
+.writtenSpan span {
+  text-transform: uppercase;
+  font-size: 1.2vw;
+  letter-spacing: 4px;
+}
+.writtenSpan a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.2vw;
+  letter-spacing: 3px;
+  transition: font-weight 0.4s ease;
+  color: #ffeff2;
+}
+.writtenSpan a:hover {
+  font-weight: 600;
+}
+.slideBarCon {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  padding: 1vw;
+  gap: 1vw;
+  /* background: #000; */
+}
+.scrollImage {
+  height: 100%;
+  object-fit: cover;
+}
+.box {
+  width: 350px;
+  height: 450px;
+  /* background: red; */
+  position: relative;
+}
+
+.text {
+  width: 90%;
+  height: 90%;
+  background: rgba(0, 0, 0, 0.397);
+  position: absolute;
+  display: flex;
+  backdrop-filter: blur(2px);
+  align-items: center;
+  flex-direction: column;
+  padding: 1vw;
+  opacity: 0;
+  transition: all 0.8s ease;
+  transform-origin: top;
+  justify-content: center;
+  border-radius: 33px;
+  gap: 2vw;
+  top: 5%;
+  left: 5%;
+  z-index: 4;
+}
+.box:hover .text {
+  opacity: 1;
+}
+.box:hover img {
+  opacity: 0.5;
+}
+.text p,
+.text a {
+  text-transform: capitalize;
+  text-decoration: none;
+  font-size: 1.2vw;
+  text-align: center;
+  line-height: 1.5;
+  color: #ffeff2;
+}
+.text #btn {
+  overflow: hidden;
+  background: none;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-radius: 11px;
+}
+.text #btn::after {
+  content: "";
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transition: all 0.3s ease;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: #000;
+}
+.text #btn:hover::after {
+  transform: scaleX(1);
+}
+/* -----------------------page3----------------- */
+.page3 {
+  width: 100%;
+  height: 100vh;
+  /* animation: zoom 3s infinite alternate; */
+  position: relative;
+  overflow: hidden;
+  padding: 1vw 2vw;
+  background: #0f0d0d;
+}
+.page3 video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.cont3 {
+  width: 100%;
+  height: 100%;
+  border-radius: 44px;
+  /* background: red; */
+  display: flex;
+  position: relative;
+  border-bottom: 4px solid rgb(61, 61, 61);
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.line {
+  width: 100%;
+  height: 150px;
+  /* background: #e2bdbd; */
+  border-top: 3px solid rgb(61, 61, 61);
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1vw;
+}
+
+.line span {
+  font-size: 5vw;
+  color: #ffffff;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+.line:hover span {
+  color: rgb(207, 141, 59);
+}
+.line img {
+  width: 150px;
+  border-radius: 11px;
+  object-fit: cover;
+}
+.hoverimg {
+  width: 500px;
+  /* height: 100%; */
+  object-fit: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  border-radius: 11px;
+  z-index: 10;
+  pointer-events: none;
+  cursor: none;
+}
+/* -------------------page4--------------------- */
+.page4 {
+  width: 100%;
+  height: 100vh;
+  /* background: red; */
+}
+.video {
+  width: 100%;
+  position: relative;
+  height: 100%;
+}
+
+.video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.vid {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  border-radius: 111px;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+  top: 0;
+  left: 0;
+  background: rgb(226, 196, 196);
+  flex-direction: column;
+}
+.vid span {
+  font-size: 2vw;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 665;
+  letter-spacing: 2px;
+  color: #1fec0d;
+  z-index: 4;
+}
+.vid .sec {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  /* opacity: .5; */
+  top: 0;
+  left: 0;
+}
+.secon {
+  width: 70%;
+  position: absolute;
+  top: 11%;
+  object-fit: cover;
+  border-radius: 44px;
+  /* box-shadow:  0 0 233px red; */
+  left: 11%;
+  height: 80%;
+}
+.vid a {
+  overflow: hidden;
+  background: #00000060;
+  backdrop-filter: blur(3px);
+  border-top: 2px solid;
+  color: #1fec0d;
+  text-decoration: none;
+  font-weight: 555;
+  padding: 6px 11px;
+  font-size: 1.4vw;
+  border-bottom: 2px solid;
+  position: relative;
+  z-index: 2;
+  border-radius: 11px;
+}
+.vid a::after {
+  content: "";
+  width: 0%;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transition: all 0.3s ease;
+  transform-origin: left;
+  background: #000;
+}
+.vid a:hover::after {
+  width: 100%;
+}
