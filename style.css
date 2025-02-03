@@ -162,13 +162,13 @@ nav a {
   left: 10%;
   border: 2px solid red;
   box-shadow: 0 0 24px red;
-  height: 80%;
+  height: fit-content;
   overflow: hidden;
   background: #381e1e;
 }
 .fronter video {
   width: 100%;
-  height: 100%;
+/*   height: 100%; */
   object-fit: cover;
 }
 /* ----------------------page2------------------ */
